@@ -1,37 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Age calculator app</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="app.js" defer></script>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Age calculator app</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-neutral-150">
+    <section class="app">
+      <div class="calculator__container bg-neutral-100 rounded-100 relative">
+        <form name="calculator__form" class="calculator__wrapper flex">
+          <div>
+            <label
+              for=""
+              id="label__day"
+              class="calculator__label text-neutral-200"
+              >Day</label
+            >
+            <input type="text" id="day" class="calculator__input" />
+            <span
+              id="alert__day"
+              class="calculator__alert text-primary-200 font-regular"
+            ></span>
+          </div>
+          <div>
+            <label
+              for=""
+              id="label__month"
+              class="calculator__label text-neutral-200"
+              >Month</label
+            >
+            <input type="text" id="month" class="calculator__input" />
+            <span
+              id="alert__month"
+              class="calculator__alert text-primary-200 font-regular"
+            ></span>
+          </div>
+          <div>
+            <label
+              for=""
+              id="label__year"
+              class="calculator__label text-neutral-200"
+              >Year</label
+            >
+            <input type="text" id="year" class="calculator__input" />
+            <span
+              id="alert__year"
+              class="calculator__alert text-primary-200 font-regular"
+            ></span>
+          </div>
+        </form>
+        <div class="calculator__line bg-neutral-150">
+          <button class="calculator__btn">
+            <img
+              src="icon-arrow.svg"
+              alt=""
+              class="calculator__icon bg-primary-100"
+            />
+          </button>
+        </div>
 
-  Day
-  DD
-
-  Month
-  MM
-
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <div class="flex flex-col">
+          <div>
+            <span id="years" class="calculator__calculated text-primary-100"
+              >--</span
+            >
+            <span class="calculator__text text-neutral-250 font-bolder"
+              >years</span
+            >
+          </div>
+          <div>
+            <span id="months" class="calculator__calculated text-primary-100"
+              >--</span
+            >
+            <span class="calculator__text text-neutral-250 font-bolder"
+              >months</span
+            >
+          </div>
+          <div>
+            <span id="days" class="calculator__calculated text-primary-100"
+              >--</span
+            >
+            <span class="calculator__text text-neutral-250 font-bolder"
+              >days</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
